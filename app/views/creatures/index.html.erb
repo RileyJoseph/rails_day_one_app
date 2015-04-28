@@ -1,0 +1,15 @@
+<center>
+<h1 style="font-family: 'Architects Daughter', cursive;">Bog Page</h1>
+<h2 style="font-family: 'Architects Daughter', cursive;"><%=@msg%></h2>
+<br>
+<% @creatures.each do |p| %>
+
+  <li><%=link_to p.name, p, :style=>"font-family: 'Architects Daughter', cursive;", :style=>"font-size: 22px;"%></li>
+
+<% end %>
+<div class="container">
+
+</div>
+<br><br>
+<%= link_to "Add a new creature", new_creature_path, :class=>"btn btn-primary", :style=>"font-family: 'Architects Daughter', cursive;", :style=>"background-color: black" %>
+</center>
