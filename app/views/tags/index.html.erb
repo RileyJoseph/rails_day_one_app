@@ -1,0 +1,20 @@
+<center>
+
+  <div class="container col-md-4">
+  </div>
+  <div class="container col-md-4">
+    <h1 style="font-family: 'Architects Daughter', cursive;">Tags Page</h1>
+    <br>
+    <div style="background-color: rgba(0,0,0,.6); padding: 15px; border-color: white 3px">
+      <% @tags.each do |t| %>
+
+      <p><%=t.name%></p>
+      <%= link_to "Delete", t, :class=>"btn btn-danger", :style=>"font-family: 'Architects Daughter', cursive;", :style=>"background-color: black", method: :delete, data: {confirm: "dude, what?"}%>
+      <% end %>
+    </div>
+  </div>
+  <div class="container">
+  </div>
+</center>
+<div class="container col-md-4">
+</div>

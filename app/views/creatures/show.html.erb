@@ -1,6 +1,21 @@
-<h1 style="font-family: 'Architects Daughter', cursive;">Creature Details</h1>
+  <div class="container col-md-2">
+  </div>
+  <div class="container col-md-6">
+    <h1 style="font-family: 'Architects Daughter', cursive;">Creature Details</h1>
+    <p>Name: <%= @creature.name %></p>
+    <p>Descrition: <%= @creature.description %> </p>
+    <p>Tags:</p>
 
-<p>Name: <%= @creature.name %></p>
-<p>Descrition: <%= @creature.description %> </p>
 
-<%= link_to "Edit creature", edit_creature_path, :class=>"btn btn-primary" %>
+    <% @creature.tags.each do |t| %>
+
+    <p><%= t.name %></p>
+
+    <% end %>
+    <br><br>
+    <%= link_to "Edit creature", edit_creature_path, :class=>"btn btn-primary", :style=>"font-family: 'Architects Daughter', cursive;", :style=>"background-color: black" %>
+  </div>
+  <br><br>
+  <img src=<%= @photo%>>
+  </div>
+

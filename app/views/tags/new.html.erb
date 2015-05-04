@@ -1,8 +1,8 @@
-<center>
+  <center>
 <div class="container col-md-4">
 </div>
 <div class="container col-md-4">
-<h1 style="font-family: 'Architects Daughter', cursive;">Create a Creature</h1>
+<h1 style="font-family: 'Architects Daughter', cursive;">Create a Tag</h1>
 <!-- <form action="/planets" method="post">
   <input type="text" name="planet[name]" placeholder="Create a planet">
   <input type="submit" class="btn btn-primary">
@@ -11,10 +11,8 @@
 
 <div class="row">
   <div class="col-md-4">
-    <%= bootstrap_form_for @creature do |f| %>
-    <%= f.text_field :name, :placeholder =>"Enter a creature", :style=>"width: 200px"%>
-    <%= f.text_field :description, :style=>"width: 200px" %>
-    <%= f.collection_check_boxes :tags, Tag.all, :id, :name, :style=>"font-color:white"%>
+    <%= bootstrap_form_for @tag do |f| %>
+    <%= f.text_field :name, :placeholder =>"Enter a Tag", :style=>"width: 200px"%>
     <%= f.primary :class=>"btn btn-primary", :style=>"font-family: 'Architects Daughter', cursive;", :style=>"background-color: black" %>
     <% end %>
   </div>
